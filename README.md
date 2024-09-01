@@ -1,10 +1,5 @@
 # Session-36 Task :
 
-Simple diagramatic overview of the collections in this MongoDB Database :
-
-![image](https://github.com/user-attachments/assets/6c99a051-b6ae-4fdd-b430-47a26b08964f)
-
-
 MongoDB queries and their respective outputs for each question below :
 
 # 1. Find all the topics and tasks which are taught in the month of October:
