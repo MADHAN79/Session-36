@@ -40,6 +40,7 @@ db.topics.aggregate([
 
 OUTPUT:
 
+```
 [
     { "topic_name": "Introduction to Python", "task_name": "Python Basics" },
     { "topic_name": "Advanced Java", "task_name": "Java OOP" },
@@ -49,7 +50,7 @@ OUTPUT:
     { "topic_name": "Cybersecurity", "task_name": "Security Audit" },
     { "topic_name": "DevOps Practices", "task_name": "CI/CD Pipeline" }
 ]
-
+```
 ==================================================================================
 ==================================================================================
 
@@ -57,6 +58,7 @@ OUTPUT:
 
 QUERY:
 
+```
 db.company_drives.find({
     date: {
         $gte: ISODate("2020-10-15"),
@@ -67,9 +69,11 @@ db.company_drives.find({
     date: 1,
     _id: 0
 });
+```
 
 OUTPUT:
 
+```
 [
     { "company_name": "TechCorp", "date": ISODate("2020-10-16") },
     { "company_name": "InnovateX", "date": ISODate("2020-10-20") },
@@ -77,6 +81,7 @@ OUTPUT:
     { "company_name": "WebWorks", "date": ISODate("2020-10-30") },
     { "company_name": "CodeCrafters", "date": ISODate("2020-10-27") }
 ]
+```
 
 ==================================================================================
 ==================================================================================
@@ -85,6 +90,7 @@ OUTPUT:
 
 QUERY:
 
+```
 db.company_drives.aggregate([
     {
         $lookup: {
@@ -115,9 +121,11 @@ db.company_drives.aggregate([
         }
     }
 ]);
+```
 
 OUTPUT:
 
+```
 [
     { "company_name": "TechCorp", "name": "Alice Johnson" },
     { "company_name": "TechCorp", "name": "Bob Smith" },
@@ -127,7 +135,7 @@ OUTPUT:
     { "company_name": "WebWorks", "name": "Fiona Gallagher" },
     { "company_name": "CodeCrafters", "name": "Jane Doe" }
 ]
-
+```
 
 ==================================================================================
 ==================================================================================
@@ -136,6 +144,7 @@ OUTPUT:
 
 QUERY:
 
+```
 db.users.aggregate([
     {
         $lookup: {
@@ -155,10 +164,11 @@ db.users.aggregate([
         }
     }
 ]);
-
+```
 
 OUTPUT:
 
+```
 [
     { "name": "Alice Johnson", "problems_solved": 50 },
     { "name": "Bob Smith", "problems_solved": 40 },
@@ -171,6 +181,7 @@ OUTPUT:
     { "name": "Ian Wright", "problems_solved": 20 },
     { "name": "Jane Doe", "problems_solved": 15 }
 ]
+```
 
 ==================================================================================
 ==================================================================================
@@ -179,6 +190,7 @@ OUTPUT:
 
 QUERY:
 
+```
 db.mentors.aggregate([
     {
         $lookup: {
@@ -200,13 +212,15 @@ db.mentors.aggregate([
         }
     }
 ]);
-
+```
 
 OUTPUT:
 
+```
 [
     { "name": "Michael Scott", "mentee_count": 16 }
 ]
+```
 
 ==================================================================================
 ==================================================================================
@@ -215,6 +229,7 @@ OUTPUT:
 
 QUERY:
 
+```
 db.attendance.aggregate([
     {
         $match: {
@@ -257,13 +272,15 @@ db.attendance.aggregate([
         }
     }
 ]);
-
+```
 
 OUTPUT:
 
+```
 [
     { "absent_and_no_task": 3 }
 ]
+```
 
 ==================================================================================
 ==================================================================================
