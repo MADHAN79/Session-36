@@ -11,6 +11,7 @@ MongoDB queries and their respective outputs for each question below :
 
 QUERY:
 
+```mongodb
 db.topics.aggregate([
     {
         $lookup: {
@@ -35,6 +36,7 @@ db.topics.aggregate([
         }
     }
 ]);
+```
 
 OUTPUT:
 
