@@ -11,7 +11,7 @@ MongoDB queries and their respective outputs for each question below :
 
 QUERY:
 
-```mongodb
+```mongodb-js
 db.topics.aggregate([
     {
         $lookup: {
